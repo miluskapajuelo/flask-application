@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}User Page{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% for msg in messages %}
+        <div class="alert alert-success alert-dismissible" role="alert">
+            {{msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+          
+        {% endfor %}
+    {% endwith %}
+<h1>Welcome {{user}}</h1>
+{% endblock %}
